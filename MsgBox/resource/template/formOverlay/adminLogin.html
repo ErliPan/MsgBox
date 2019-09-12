@@ -1,0 +1,30 @@
+<form action="" method="post">
+	<div class="form-group form">
+		<h3 style="text-align: center" id="title">ACCESSO RICHIESTO</h3>
+
+		<h6>Utente</h6>
+		<input type="text" class="form-control field" placeholder="utente" name="user">
+
+		<h6>Password</h6>
+		<input type="password" class="form-control field" placeholder="passw0rd" name="pass">
+
+		<div style="text-align: center">
+			<input style="width: 200px" type="submit" value="Login" class="btn btn-primary"></input>
+			<br />
+			<a href="?">
+				<button style="width: 200px; margin-top: 20px" type="button" class="btn btn-outline-primary">
+					Torna indietro
+				</button>
+			</a>
+		</div>
+	</div>
+</form>
+
+<!-- This makes the login page non-scrollable on iOS -->
+<style media="screen">
+	html,
+	body {
+		position: fixed;
+		width: 100%;
+	}
+</style>

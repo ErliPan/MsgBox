@@ -1,0 +1,27 @@
+<div class="c1 bigCard">
+	<form method="GET" action="%action%">
+		<h1 class="display-5"><b>CREA BOT</b></h1>
+		<div style="height: 30px"></div>
+		<fieldset class="form-group">
+			<label>Nome BOT</label>
+			<input type="text" class="form-control" name="name" placeholder="Nome BOT" pattern="\S\S\S\S\S+" required>
+			<small class="text-muted" style="color: #fff !important;">
+				Minimo 5 caratteri
+			</small>
+		</fieldset>
+		<div style="height: 30px"></div>
+		<fieldset class="form-group">
+			<label>WebHook URL</label>
+			<input type="text" class="form-control" name="webHook" placeholder="https://example.dev/secretPath/"
+				pattern="https?:\/\/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
+				required>
+			<small class="text-muted" style="color: #fff !important;">
+				Questo server invia richieste GET al webHook in caso il bot venga contattato
+			</small>
+			<input type="hidden" name="msgBox_csrf" value="%csrf%">
+		</fieldset>
+		<div style="height: 30px"></div>
+		<button type="submit" class="btn btn-primary">Crea</button>
+	</form>
+</div>
+<div style="height: 50px"></div>

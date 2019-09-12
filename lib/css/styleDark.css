@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+body {
+  background-color: #1D2731;
+}
+hr {
+  border-color: #FFF;
+  border-width: 2px;
+  margin: 7px;
+}
+a, a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.page {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0B3C5D;
+  color: #FFF;
+  min-height: 100vh;
+  text-align: center;
+}
+.title {
+  font-weight: 900;
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+}
+.titleLong {
+  font-weight: 900;
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+}
+.subtitle {
+  font-size: 18px;
+  font-weight: normal;
+  margin: auto;
+  max-width: 900px;
+}
+.text {
+  font-weight: bold;
+  color: #fff;
+}
+.subtext {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+}
+.icon {
+  height: 50px;
+}
+.spacing {
+  max-width: 450px;
+  height: 120px;
+}
+.card {
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: 3px 3px 8px #1D2731;
+}
+.card:hover {
+  box-shadow: 10px 10px 8px #1D2731;
+  transform: scale(1.10);
+}
+.loginCard {
+  box-shadow: 3px 3px 8px #1D2731;
+}
+.loginCircle {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  border-radius: 60px;
+  background-color: #ccc;
+}
+.loginCircle:hover {
+  transform: scale(1.15);
+}
+.loginIcon {
+  height: 60px;
+  margin-top: 20px;
+}
+.bigCard {
+  max-width: 800px;
+  margin: auto;
+  padding: 25px;
+  box-shadow: 8px 8px 8px #1D2731;
+}
+.bigCard:hover {
+  transform: scale(1.03);
+  box-shadow: 12px 12px 10px #1D2731;
+}
+.form {
+  background-color: #fff;
+  margin-top: -60px;
+}
+.button {
+  width: 80%;
+  height: 60px;
+  margin-top:30px;
+  border-radius: 15px;
+}
+.field {
+  height: 60px;
+  margin-top:30px;
+  border-radius: 15px;
+}
+.input {
+  font-size: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+h2 {
+  font-weight: bold;
+}
+p {
+  line-height: normal;
+}
+* {
+  transition-duration: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 75px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .titleLong {
+    font-size:8vw;
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 65px;
+  }
+  .titleLong {
+    font-size:11vw;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 55px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .title {
+    font-size: 45px;
+  }
+  .text, .icon {
+    margin: -10px;
+  }
+}
+@media (max-width: 330px) {
+  .title {
+    font-size: 38px;
+  }
+}
+
+.c0 {
+  background-color: #c0392b;
+}
+.c1 {
+  background-color: #2980b9;
+}
+.c2 {
+  background-color: #f57f17;
+}
+.c3 {
+  background-color: #6d4c41;
+}
+.c4 {
+  background-color: #8e44ad;
+}
+.c5 {
+  background-color: #ad1457;
+}
+.c6 {
+  background-color: #3949ab;
+}
+.c7 {
+  background-color: #00838f;
+}
+.c8 {
+  background-color: #2e7d32;
+}
+.c9 {
+  background-color: #34495e;
+}
+.c10 {
+  background-color: #839192;
+}
+.c11 {
+  background-color: #4a148c;
+}
+.c12 {
+  background-color: #ab47bc;
+}
+.c13 {
+  background-color: #006064;
+}
+.c14 {
+  background-color: #33691e;
+}
+.c15 {
+  background-color: #795548;
+}
+.c16 {
+  background-color: #3e2723;
+}

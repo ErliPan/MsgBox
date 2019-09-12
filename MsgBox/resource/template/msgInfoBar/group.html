@@ -1,0 +1,55 @@
+<div class="col-12 fixed-top" style="max-width: 600px;margin: auto;">
+	<div class="row justify-content-between" style="padding: 10px;height: 70px">
+		<div class="col-xs align-self-center" style="text-align: left;font-size: 18px">
+			<i class="fas fa-comments"></i>
+			%nome%
+		</div>
+		<div class="col-xs align-self-center" style="text-align: center;font-size: 18px">
+			<span id="userCount">
+				%user%
+			</span>
+			<i class="fas fa-users"></i>
+		</div>
+		<div class="col-xs align-self-center" style="text-align: right;font-size: 18px">
+			%nick%
+			<i class="fas fa-user" style="padding-right: 5px"></i>
+			<i class="fas fa-sign-out-alt logout" style="font-size: 20px" onclick="logout()">
+				<span class="tooltiptext">Logout</span>
+			</i>
+		</div>
+		<style media="screen">
+			.logout {
+				position: relative;
+				display: inline-block;
+			}
+
+			.logout:hover {
+				transform: scale(1.2);
+			}
+
+			.logout .tooltiptext {
+				font-family: 'Roboto', sans-serif;
+				transform: scale(0.8);
+				visibility: hidden;
+				background-color: #555;
+				color: #fff;
+				text-align: center;
+				padding: 5px 0;
+				border-radius: 6px;
+				width: 100px;
+				top: 100%;
+				margin-left: -85px;
+				position: absolute;
+				z-index: 1;
+				transition: opacity 0.3s;
+				opacity: 0;
+			}
+
+			.logout:hover .tooltiptext {
+				transition: opacity 0.3s;
+				visibility: visible;
+				opacity: 1;
+			}
+		</style>
+	</div>
+</div>

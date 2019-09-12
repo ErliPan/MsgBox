@@ -1,0 +1,29 @@
+<div class="c2 bigCard">
+	<form method="GET" action="%action%">
+		<h1 class="display-5"><b>CREA GRUPPO</b></h1>
+		<div style="height: 30px"></div>
+		<fieldset class="form-group">
+			<label>Nome chat</label>
+			<input type="hidden" name="msgBox_csrf" value="%csrf%">
+			<input type="text" class="form-control" name="nome" placeholder="Nome gruppo" pattern="\S\S\S\S\S+"
+				required>
+			<small class="text-muted" style="color: #fff !important;">
+				Minimo 5 caratteri
+			</small>
+		</fieldset>
+		<div style="height: 30px"></div>
+		<fieldset class="form-group">
+			<label>Visibilità</label>
+			<select class="form-control" name="visibilita">
+				<option value="pub">Pubblico</option>
+				<option value="priv">Privato</option>
+			</select>
+			<small class="text-muted" style="color: #fff !important;">
+				Un gruppo privato sarà accessibile solo tramite link, uno pubblico sarà visibile dalla pagina principale
+			</small>
+		</fieldset>
+		<div style="height: 30px"></div>
+		<button type="submit" class="btn btn-primary">Crea</button>
+	</form>
+</div>
+<div style="height: 50px"></div>

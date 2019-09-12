@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+author: Erli Pan
+mail: server@erlipan.dev
+-->
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ErliPan.dev</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/lib/css/styleLight.css" media="none" id="light">
+  <link rel="stylesheet" href="/lib/css/styleDark.css" media="" id="dark">
+
+  <script>
+  	if (localStorage.getItem("theme") == "light") {
+  		document.getElementById("light").media = "";
+  		document.getElementById("dark").media = "none";
+  	}
+
+  	function switchLight() {
+  		if (document.getElementById("light").media == "none") {
+  			document.getElementById("light").media = "";
+  			document.getElementById("dark").media = "none";
+  			document.getElementById("themeIcon").classList.add('fa-moon');
+  			document.getElementById("themeIcon").classList.remove('fa-sun');
+  			localStorage.setItem("theme", "light");
+
+  		} else {
+  			document.getElementById("dark").media = "";
+  			document.getElementById("light").media = "none";
+  			document.getElementById("themeIcon").classList.add('fa-sun');
+  			document.getElementById("themeIcon").classList.remove('fa-moon');
+  			localStorage.setItem("theme", "dark");
+  		}
+  	}
+  </script>
+  
+</head>
+
+<body>
+
+  <div class="container page">
+
+	<div style="height: 75px;">
+		<div style="float: right; margin: 5%; margin-top: 25px; margin-bottom: 0px; font-size: 25px">
+			<!-- No JS no icon. Default is dark -->
+			<i class="fas" id="themeIcon" onclick="switchLight()"></i>
+			<script>
+				if (localStorage.getItem("theme") == "light") {
+					document.getElementById("themeIcon").classList.add('fa-moon');
+					document.getElementById("themeIcon").classList.remove('fa-sun');
+				} else {
+					document.getElementById("themeIcon").classList.add('fa-sun');
+					document.getElementById("themeIcon").classList.remove('fa-moon');
+					localStorage.setItem("theme", "dark");
+				}
+			</script>
+		</div>
+	</div>
+
+    %layout%
+
+    <div style="height: 75px;"></div>
+  </div>
+
+</body>
+
+</html>

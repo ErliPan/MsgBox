@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+author: Erli Pan
+mail: server@erlipan.dev
+-->
+
+<html lang="it" dir="ltr">
+
+<head>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="MsgBox">
+	<link rel="apple-touch-icon" href="single-page-icon.png">
+
+	<style media="screen">
+		body {
+			-webkit-tap-highlight-color: transparent;
+			-webkit-touch-callout: none;
+		}
+	</style>
+
+	<script>
+		//iOS webApp fix
+		setTimeout(webAppLinkFix, 300);
+		//Replace default link behavior after every link is loaded
+		// 300ms delay so everything is loaded
+		function webAppLinkFix() {
+			var a = document.getElementsByTagName("a");
+			for (var i = 0; i < a.length; i++) {
+				a[i].onclick = function () {
+					window.location = this.getAttribute("href");
+					return false
+				}
+			}
+		}
+	</script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="resource/css/style.css">
+	<title>%titolo%_msgbox</title>
+</head>
+
+<body>
+	<div class="container page" style="padding: 0px">
+
+		%msgInfoBar%
+
+		<div style="height: 85px"></div>
+
+		<!-- MESSAGES -->
+
+		<div style="min-height: calc(100vh - 240px)" id="content">
+			%content%
+		</div>
+
+		<!-- MESSAGES -->
+
+		<div style="height: 85px"></div>
+
+		<div class="col-12 bottom sticky-bottom" style="max-width: 600px;margin: auto">
+			<div class="row">
+				<div class="col-2 iconBox">
+					<i class="far fa-file-image icon" style="font-size: 30px" id="imgBtn"
+						onclick="document.getElementById('fileChooser').click()"></i>
+				</div>
+				<div class="col-8 msgBar">
+					<div class="form-group">
+						<input type="text" class="form-control" id="msg" placeholder="messaggio">
+					</div>
+				</div>
+				<div class="col-2 iconBox">
+					<i class="far fa-paper-plane icon" style="font-size: 30px" onclick="sendMessage()"></i>
+				</div>
+			</div>
+		</div>
+
+		%keys%
+
+	</div>
+
+	<div class="overlay" id="nickRequest">
+		%form%
+	</div>
+
+</body>
+
+</html>
